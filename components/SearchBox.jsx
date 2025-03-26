@@ -10,12 +10,14 @@ function SearchBox({setWeatherData ,setError}) {
         setCity(e.target.value);
     }
     const getWeather =(e)=>{
+        e.preventDefault();
         setSearchCity(city);
         setError("");
     }
   return (
     <>
       <div className="flex items-center border border-gray-300 rounded-md p-2 w-1/3 mx-auto">
+      <form className="flex"  onSubmit={getWeather}>
         <input
           type="text"
           className="w-full border-none focus:outline-none px-2"
@@ -24,9 +26,10 @@ function SearchBox({setWeatherData ,setError}) {
             onChange={search}
             
         />
-        <button type="submit" className="bg-blue-400  p-2 rounded-md" onClick={getWeather}>
-          <IoSearch className="h-5 w-5" />
+        <button type="submit" className="bg-blue-400  p-2 rounded-md ml-50 " onClick={getWeather}>
+          <IoSearch className="h-5 w-5 " />
         </button>
+        </form>
       </div>
      {searchCity && <Getdata city={searchCity} setWeatherData={setWeatherData} setError={setError}/>}
     </>
