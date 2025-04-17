@@ -35,8 +35,8 @@ function LandingPage() {
   };
 
   return (
-    <div className="border-2 border-gray-950  h-screen w-screen px-10 py-10  bg-[url(./background.png)] ">
-      <header className="flex justify-center items-start font-semibold font-sans ">  
+    <div className="border-2 border-gray-950  h-screen w-screen px-10 py-10  bg-[url(/background.png)] ">
+      <header className="flex justify-center items-start font-semibold font-sans ">
         <h1>Weather Forecasting</h1>
       </header>
       <div className="flex justify-center pt-20 pb-12">
